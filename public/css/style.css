@@ -1,17 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
 *{
     margin: 0;
     box-sizing: border-box;
-    font
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    border: none;
+    text-decoration: none;
+    color: #101828;
 }
 
-form{
-    box-sizing: border-box;
+body {
+    position: relative;
+    min-height: 100vh;
 }
 
-label{
-    box-sizing: border-box;
+/* Button */
+
+.blue {
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: #1570EF;
 }
 
-input{
-    box-sizing: border-box;
+/* FORMS */
+
+content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #eaecf0;
+    margin-bottom: 20px;
+}
+
+input, select, textarea {
+    padding: 10px 14px;
+    border: 1px solid #d0d5dd;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border: 1px solid #84CAFF;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05), 0 0 0 4px #D1E9FF;
+    outline: none;
+}
+
+.submit {
+    text-align: left;
+    margin: 24px auto;
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+}
+
+.validate, .card > a {
+    padding: 10px 16px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #1570EF;
+}
+
+p > a {
+    text-align: center;
+    color: #1570EF;
+}
+
+
+/* Connexion formulaire */
+
+.connection {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% auto;
+}
+
+.connectionButton {
+    width: 100%;
+}
+
+.connectionForm {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0;
+    gap: 8px;
 }
