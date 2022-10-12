@@ -1,33 +1,14 @@
-<div class="navbar">
+<nav>
 
     <div class="headNav">
         <a href="{{ path('main_index') }}"><img src="{{ asset('img/papierSVG.svg') }}"></a>
         <h3>QUITTANCE</h3>
     </div>
 
-    <div class="interface">
-        <a href="#">
-            <button class="btnPrimary" type="button">Mes biens</button>
-        </a>
-        <a href="#">
-            <button class="btnPrimary" type="button">Mes locataires</button>
-        </a>
-        <a href="#">
-            <button class="btnPrimary" type="button">Les Quittance</button>
-        </a>
-
-    </div>
-
-
     <div class="user">
-        <a href="{{ path('app_logout') }}">
-            <button class="btnPrimary" type="button">Deconnexion</button>
-        </a>
-        <a href="#">
-            <button class="btnPrimary" type="button">Mon Profil</button>
-        </a>
-        <img class="avatar" src="{{ vich_uploader_asset(app.user, 'imageFile') }}">
+        <a class="btnPrimary" href="#">Gestion</a>
+        <a href="#"><img class="avatar" src="{{ vich_uploader_asset(app.user, 'imageFile') }}" alt="avatar"></a>
+        <a class="deconnexion" href="{{ path('app_logout') }}" title="deconnexion"><img src="{{ asset('img/deconnexion.svg') }}" alt="deconnexion"></a>
     </div>
+</nav>
 
-
-</div>

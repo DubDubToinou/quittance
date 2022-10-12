@@ -27,9 +27,9 @@ body {
     font-size: 0.9rem;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #154ecc;
+    background-color: #3a4c69;
     color: white;
-    border: #0f5cee solid;
+    border: #19203b solid;
 }
 
 .remember_me{
@@ -38,7 +38,7 @@ body {
 
 .btnSubmit:hover{
     color: white;
-    background-color: #0359ff;
+    background-color: #405786;
 }
 
 .btnNouveauCompte {
@@ -46,14 +46,14 @@ body {
     font-size: 0.9rem;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #154ecc;
+    background-color: #3a4c69;
     color: white;
-    border: #0f5cee solid;
+    border: #19203b solid;
 }
 
 .btnNouveauCompte:hover {
     color: white;
-    background-color: #0359ff;
+    background-color: #405786;
 }
 
 .container-form{
@@ -83,7 +83,7 @@ body {
 
 input{
     border-radius: 5px;
-    border: none;
+    border: 1px solid #212E53;
     padding: 8px;
     font-size: 1rem;
 }
@@ -93,7 +93,7 @@ input::placeholder{
 }
 
 input:focus{
-    outline: 3px solid #212E53;
+    outline: 1px solid #212E53;
 }
 
 .alert{
@@ -119,12 +119,12 @@ input:focus{
 /*  ###################################
     ##           NAV BAR             ##
     ###################################*/
-.navbar{
+nav{
     padding: 25px 10px;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
-    flex-wrap: wrap;
+
 }
 
 .headNav{
@@ -132,6 +132,7 @@ input:focus{
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .headNav img{
@@ -141,17 +142,18 @@ input:focus{
 .user{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     padding-right: 20px;
+    flex-wrap: wrap;
 }
 
 .btnPrimary{
-    background-color: #154ecc;
+    background-color: #3a4c69;
     color: white;
     font-size: 1rem;
     border-radius: 10px;
     border: 1px;
-    padding: 2px 10px;
+    padding: 8px 15px;
     box-shadow: 0 2px 3px #0e0e0e;
 }
 
@@ -166,6 +168,11 @@ input:focus{
     display: flex;
     gap: 15px;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.deconnexion img{
+    width: 40px;
 }
 
 /*  ###################################
