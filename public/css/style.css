@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background-color: #4A919E
+    background-color: #fdfcfc;
 }
 
 /*  ###################################
@@ -24,32 +24,36 @@ body {
 
 .btnSubmit {
     padding: 7px 50px;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #212E53;
-    color: #a4a3a3;
-    border: #417b88 solid;
+    background-color: #154ecc;
+    color: white;
+    border: #0f5cee solid;
+}
+
+.remember_me{
+    font-size: 0.8rem;
 }
 
 .btnSubmit:hover{
     color: white;
-    background-color: darkred;
+    background-color: #0359ff;
 }
 
 .btnNouveauCompte {
     padding: 7px 50px;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #212E53;
-    color: #a4a3a3;
-    border: #417b88 solid;
+    background-color: #154ecc;
+    color: white;
+    border: #0f5cee solid;
 }
 
 .btnNouveauCompte:hover {
     color: white;
-    background-color: darkred;
+    background-color: #0359ff;
 }
 
 .container-form{
@@ -64,7 +68,7 @@ body {
     gap: 10px;
     flex-direction: column;
     align-items: center;
-    padding: 50px 40px;
+    padding: 70px 70px;
     color: #212E53;
     border-radius: 10px;
     border: white 1px solid;
@@ -81,6 +85,7 @@ input{
     border-radius: 5px;
     border: none;
     padding: 8px;
+    font-size: 1rem;
 }
 
 input::placeholder{
@@ -115,31 +120,61 @@ input:focus{
     ##           NAV BAR             ##
     ###################################*/
 .navbar{
-    padding: 10px;
+    padding: 25px 10px;
     display: flex;
-    background-color: #16cc16;
+    justify-content: space-between;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    flex-wrap: wrap;
 }
 
 .headNav{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    background-color: #e71c1c;
 }
 
 .headNav img{
-    width: 50px;
+    width: 65px;
 }
 
 .user{
     display: flex;
     align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+.btnPrimary{
+    background-color: #154ecc;
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px;
+    padding: 2px 10px;
+    box-shadow: 0 2px 3px #0e0e0e;
 }
 
 .avatar{
-    width: 50px;
+    width: 65px;
+    border:2px solid #fff;
+    box-shadow: 0 6px 5px #0e0e0e;
+    border-radius: 45%;
 }
 
+.interface{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/*  ###################################
+    ##           CONTAINER BODY      ##
+    ###################################*/
+
+.containerBody{
+    padding-top: 20px;
+}
 
 
 

@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>{% block title %}Quittance | {% endblock %}</title>
     <link rel="icon" href="{{ asset('img/papierSVG.svg') }}">
@@ -14,28 +15,34 @@
 </head>
 <body>
 
-    <header>
-        {% if app.user %}
-            {% include 'inc/_nav.html.twig' %}
-        {% endif %}
-    </header>
+<header>
+    {% if app.user %}
+        {% include 'inc/_nav.html.twig' %}
+    {% endif %}
+</header>
 
-    <main>
-        {% for label, messages in app.flashes %}
-            {% for message in messages %}
-                <div class="flash flash-{{ label }}">
-                    {{ message }}
-                </div>
-            {% endfor %}
+<main>
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="flash flash-{{ label }}">
+                {{ message }}
+            </div>
         {% endfor %}
-        {% block body %}
-        {% endblock %}
-    </main>
+    {% endfor %}
 
-    <footer>
-        {% block footer %}
+    <div class="containerBody">
+        {% block body %}
+
         {% endblock %}
-    </footer>
+    </div>
+
+</main>
+
+<footer>
+    {% block footer %}
+    {% endblock %}
+</footer>
 
 
 </body>

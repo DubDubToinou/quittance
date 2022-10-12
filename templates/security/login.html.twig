@@ -30,7 +30,8 @@
                     <input type="password" name="password" id="password" placeholder="Mot de passe" autocomplete="off"  required/>
                 </div>
                 <div>
-                    <input type="checkbox" name="_remember_me" class="remember_me"> Se souvenir de moi.
+                    <input type="checkbox" id="remember_me" name="_remember_me " class="remember_me">
+                    <label for="remember_me" class="remember_me">Se souvenir de moi</label>
                 </div>
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
