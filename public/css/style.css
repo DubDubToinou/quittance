@@ -1,108 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
-
 *{
     margin: 0;
+    font-family: 'Inter', Serif, sans-serif;
+    font-size: 1.2rem;
     box-sizing: border-box;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    font-size: 17px;
-    border: none;
-    text-decoration: none;
-    color: #101828;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    position: relative;
-    min-height: 100vh;
+    background-color: #4A919E
 }
 
-/* Button */
-
-.blue {
-    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-    font-size: 14px;
-    font-weight: 500;
-    color: #FFFFFF;
-    background-color: #1570EF;
+.btnSubmit {
+    padding: 7px 50px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #212E53;
+    color: #a4a3a3;
+    border: #417b88 solid;
 }
 
-/* FORMS */
+.btnSubmit:hover{
+    color: white;
+    background-color: darkred;
+}
 
-content {
-    padding: 16px;
+.btnNouveauCompte {
+    padding: 7px 50px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #212E53;
+    color: #a4a3a3;
+    border: #417b88 solid;
+}
+
+.btnNouveauCompte:hover {
+    color: white;
+    background-color: darkred;
+}
+
+.container-form{
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    justify-content: center;
+    margin-top: 200px;
+
 }
 
-.inputField {
+.login-form {
     display: flex;
-    flex-direction: column;
-}
-
-fieldset {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid #eaecf0;
-    margin-bottom: 20px;
-}
-
-input, select, textarea {
-    padding: 10px 14px;
-    border: 1px solid #d0d5dd;
-    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-input:focus, select:focus, textarea:focus {
-    border: 1px solid #84CAFF;
-    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05), 0 0 0 4px #D1E9FF;
-    outline: none;
-}
-
-.submit {
-    text-align: left;
-    margin: 24px auto;
-    display: flex;
-    justify-content: end;
-    gap: 12px;
-}
-
-.validate, .card > a {
-    padding: 10px 16px;
-    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 14px;
-    color: #FFFFFF;
-    background-color: #1570EF;
-}
-
-p > a {
-    text-align: center;
-    color: #1570EF;
-}
-
-
-/* Connexion formulaire */
-
-.connection {
-    max-width: 360px;
-    display: flex;
+    gap: 10px;
     flex-direction: column;
     align-items: center;
-    margin: 5% auto;
+    padding: 50px 40px;
+    color: #212E53;
+    border-radius: 10px;
+    border: white 1px solid;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.connectionButton {
-    width: 100%;
+.login-form h1 {
+    padding-bottom: 15px;
+    font-size: 2rem;
+    color: #212E53;
 }
 
-.connectionForm {
-    display: flex;
-    flex-direction: column;
-    margin: 32px 0;
-    gap: 8px;
+input{
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
 }
+
+input::placeholder{
+    font-size: 1rem;
+}
+
+input:focus{
+    outline: 3px solid #212E53;
+}
+
+
+
+
+
+
