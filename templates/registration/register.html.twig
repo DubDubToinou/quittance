@@ -5,13 +5,27 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Inscription</h1>
 
     {{ form_start(registrationForm) }}
-    <div class="form-floating mb-3">
-        {{ form_widget(registrationForm) }}
-    </div>
+    <div class="container-form">
+        <div class="login-form">
+            <h1>Inscription</h1>
+            <div class="alert">
+                {{ form_errors(registrationForm) }}
+            </div>
+            {{ form_widget(registrationForm.email) }}
 
-    <button type="submit" class="btn">S'inscrire</button>
-    {{ form_end(registrationForm) }}
+            {{ form_widget(registrationForm.nom) }}
+
+            {{ form_widget(registrationForm.prenom) }}
+
+            {{ form_widget(registrationForm.plainPassword) }}
+
+            <button type="submit" class="btnSubmit">S'inscrire</button>
+            <a href="{{ path('app_login') }}">
+                <button type="button" class="btnSubmit">Déjà un compte ?</button>
+            </a>
+            {{ form_end(registrationForm) }}
+        </div>
+    </div>
 {% endblock %}
