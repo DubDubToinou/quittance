@@ -15,7 +15,9 @@
 <body>
 
     <header>
-
+        {% if app.user %}
+            {% include 'inc/_nav.html.twig' %}
+        {% endif %}
     </header>
 
     <main>

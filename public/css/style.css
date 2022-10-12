@@ -18,6 +18,10 @@ body {
     background-color: #4A919E
 }
 
+/*  ###################################
+    ## FORMULAIRE _ LOGIN _ REGISTER ##
+    ###################################*/
+
 .btnSubmit {
     padding: 7px 50px;
     font-size: 1.2rem;
@@ -106,6 +110,37 @@ input:focus{
     padding-bottom: 10px;
     border-radius: 20px;
 }
+
+/*  ###################################
+    ##           NAV BAR             ##
+    ###################################*/
+.navbar{
+    padding: 10px;
+    display: flex;
+    background-color: #16cc16;
+}
+
+.headNav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #e71c1c;
+}
+
+.headNav img{
+    width: 50px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.avatar{
+    width: 50px;
+}
+
+
 
 
 
