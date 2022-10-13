@@ -170,7 +170,7 @@ h1{
 .avatar{
     width: 65px;
     border:2px solid #fff;
-    box-shadow: 0 6px 5px #0e0e0e;
+    box-shadow: 0px 0px 8px 1px #0e0e0e;
     border-radius: 45%;
 }
 
@@ -189,37 +189,47 @@ h1{
 }
 
 /*  ###################################
-    ##           CONTAINER BODY      ##
+    ##           CONTENT PROFIL      ##
     ###################################*/
 
-.content{
-    padding: 20px;
+main{
     display: flex;
-    margin-left: 220px;
-    margin-top: 20px;
-    margin-right: 20px;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contentProfil{
+    display: flex;
     flex-direction: column;
+    gap: 3px;
+    padding: 20px 220px;
+    margin-top: 30px;
+    align-items: stretch;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    align-items: flex-start;
+    text-align: center;
 }
 
-@media screen and (max-width: 700px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
+.contentProfil img {
+    width: 90px;
 }
 
-/*  ##########################
-    ##   BODY / PROFIL     ##
-    ##########################*/
+.contentProfil h3{
+    font-size: 1.1rem;
+    text-decoration: underline;
+    padding-bottom: 3px;
+}
+
+.contentProfil h2{
+    font-size: 1.3rem;
+    text-shadow: 4px 2px 5px #e5d9d9;
+}
 
 .headProfil{
     display: flex;
+    justify-content: center;
     gap: 10px;
+    margin-bottom: 10px;
 }
 
 .headProfil h1{
@@ -230,55 +240,54 @@ h1{
     border-radius: 50%;
 }
 
-.bodyProfil{
+/*  ##########################
+    ##   CONTENT MODIFIER PROFILE     ##
+    ##########################*/
+
+.first-content-form{
     display: flex;
-    flex-direction: column;
     gap: 10px;
+    flex-wrap: wrap;
 }
+
+.adresse-content-form{
+    padding-top: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.img-content-form img {
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+/*  ###################################
+    ##           FORM MODIFIER      ##
+    ###################################*/
+
 
 
 /*  ###################################
     ##           SIDE BAR      ##
     ###################################*/
 
-.sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #fdfcfc;
-    position: fixed;
-    height: 50%;
-    overflow: auto;
-}
-
-.sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-    border-right-color: #3a4c69;
-    border-right-style: solid;
-    border-right-width: thin;
-}
-
-.sidebar a.active {
-    background-color: #464669;
-    color: white;
-}
-
-.sidebar a:hover:not(.active) {
-    background-color: #5a5a86;
-    color: white;
+.sidebar{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 18px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 
-
-@media screen and (max-width: 400px) {
-    .sidebar a {
-        text-align: center;
-        float: none;
-    }
-}
 
 /*  ###################################
     ##           FOOTER      ##
@@ -290,7 +299,7 @@ footer{
     padding: 2rem 0;
     width: 100%;
     text-align: center;
-    box-shadow: 1px 1px 5px 2px rgb(0 0 0 / 20%)
+    box-shadow: 1px 1px 5px 2px rgb(0 0 0 / 20%);
 }
 
 

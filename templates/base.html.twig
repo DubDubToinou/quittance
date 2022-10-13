@@ -18,10 +18,12 @@
 <header>
     {% if app.user %}
         {% include 'inc/_nav.html.twig' %}
+        {% include 'inc/_sideBar.html.twig' %}
     {% endif %}
 </header>
 
 <main>
+
 
     {% for label, messages in app.flashes %}
         {% for message in messages %}
@@ -30,10 +32,6 @@
             </div>
         {% endfor %}
     {% endfor %}
-
-    {% if app.user %}
-        {% include 'inc/_sideBar.html.twig' %}
-    {% endif %}
 
     {% block body %}
 

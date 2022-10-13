@@ -4,21 +4,21 @@
 
 {% block body %}
 
-    <div class="content">
+
+    <div class="contentProfil">
         <div class="headProfil">
-            <h1>Bonjour {{ profil.prenom ~ ' ' ~ profil.nom|upper }}</h1>
-            <img src="{{ vich_uploader_asset(profil, 'imageFile') }}">
+            <h1>{{ profil.prenom ~ ' ' ~ profil.nom|upper }}</h1>
+            <img src="{{ vich_uploader_asset(profil, 'imageFile') }}" alt="Photo de profil">
         </div>
 
-        <div class="bodyProfil">
-            <ul>
-                <li>E-mail: {{ profil.email }}</li>
-                <li>Adresse : {{ profil.adresse ? profil.adresse : 'Pas d\'adresse' }}</li>
-                <li>Ville : {{ profil.adresse ? profil.adresse : 'Pas d\'adresse' }}</li>
-                <li>Code Postal : {{ profil.adresse ? profil.adresse : 'Pas d\'adresse' }}</li>
-            </ul>
-            <a class="btnPrimary" href="#">Modifier mon profil</a>
-        </div>
+
+        <p><h3>E-mail :</h3>{{ profil.email }}</p>
+        <p><h3>Adresse :</h3>{{ profil.adresse ? profil.adresse : 'Pas d\'adresse' }}</p>
+        <p><h3>Ville :</h3>{{ profil.adresse ? profil.adresse : 'Pas d\'adresse' }}</p>
+        <p><h3>Code Postal :</h3>{{ profil.adresse ? profil.adresse : 'Pas d\'adresse' }}</p>
+
+        <a class="btnPrimary" href="{{ path('profil_modifier') }}">Modifier mon profil</a>
     </div>
+
 
 {% endblock %}

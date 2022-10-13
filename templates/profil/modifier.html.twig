@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} Modifier mon profil
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="contentProfil">
+        <h2>Modifier mon profil</h2>
+        {% if form_errors(formModifier) %}
+            <div class="alert">
+                {{ form_errors(registrationForm) }}
+            </div>
+        {% endif %}
+
+
+        {{ form_start(formModifier) }}
+
+        <div class="first-content-form">
+            {{ form_widget(formModifier.email) }}
+            {{ form_widget(formModifier.nom) }}
+            {{ form_widget(formModifier.prenom) }}
+        </div>
+        <div class="adresse-content-form">
+            {{ form_widget(formModifier.adresse) }}
+            {{ form_widget(formModifier.ville) }}
+            {{ form_widget(formModifier.codePostal) }}
+        </div>
+
+        {{ form_widget(formModifier.imageFile) }}
+
+        <br>
+        <button class="btnSubmit" type="submit">Valider</button>
+
+        {{ form_end(formModifier) }}
+
+
+    </div>
+{% endblock %}
+
+

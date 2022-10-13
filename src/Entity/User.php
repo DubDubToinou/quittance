@@ -39,7 +39,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
-     * @Assert\Regex(pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$", message="8 Caractères / Majuscules / Caractères spéciaux")
      */
     private $password;
 
@@ -295,5 +294,24 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->dateInscription = $dateInscription;
 
         return $this;
+    }
+
+    public function serialize()
+    {
+        return serialize([
+            $this->id,
+            $this->pseudo,
+            $this->roles,
+            $this->password,
+        ]);
+    }
+
+    public function unserialize($data)
+    {
+        list($this->id,
+            $this->pseudo,
+            $this->roles,
+            $this->password,
+            ) = unserialize($data,['allowed_classes'=>false]);
     }
 }
