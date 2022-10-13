@@ -152,7 +152,7 @@ h1{
 .user{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     padding-right: 20px;
     flex-wrap: wrap;
 }
@@ -174,15 +174,18 @@ h1{
     border-radius: 45%;
 }
 
-.interface{
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    flex-wrap: wrap;
+.avatar:hover{
+    opacity: 70%;
 }
 
 .deconnexion img{
-    width: 40px;
+    width: 50px;
+    opacity: 75%;
+
+}
+
+.deconnexion img:hover{
+    opacity: 100%;
 }
 
 /*  ###################################
@@ -213,6 +216,9 @@ h1{
     color: black;
     padding: 16px;
     text-decoration: none;
+    border-right-color: #3a4c69;
+    border-right-style: solid;
+    border-right-width: thin;
 }
 
 .sidebar a.active {
@@ -221,7 +227,7 @@ h1{
 }
 
 .sidebar a:hover:not(.active) {
-    background-color: #464669;
+    background-color: #5a5a86;
     color: white;
 }
 
