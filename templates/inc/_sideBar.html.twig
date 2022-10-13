@@ -1,6 +1,10 @@
-<div class="sidebar">
+<div class="sidebar" xmlns="http://www.w3.org/1999/html">
     <a class="active" href="#home">Mes biens</a>
     <a href="#news">Locataires</a>
     <a href="#contact">Quittances</a>
     <a href="#about">Statistiques</a>
+
+    {% if is_granted("ROLE_ADMIN") %}
+        <a href="{{ path('admin_panel') }}">Admin</a>
+    {% endif %}
 </div>
