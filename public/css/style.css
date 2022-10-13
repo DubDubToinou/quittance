@@ -298,6 +298,14 @@ main{
     visibility: hidden;
 }
 
+/*  ###################################
+    ##           CONTENT BIEN      ##
+    ###################################*/
+
+.content-bien{
+    display: flex;
+    flex-direction: column;
+}
 
 /*  ###################################
     ##           FORM MODIFIER      ##

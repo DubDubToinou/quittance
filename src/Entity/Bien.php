@@ -47,6 +47,16 @@ class Bien
      */
     private $prixCharge;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="biens")
+     */
+    private $user;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $dateCreated;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +130,30 @@ class Bien
     public function setPrixCharge(?float $prixCharge): self
     {
         $this->prixCharge = $prixCharge;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    public function getDateCreated(): ?\DateTimeInterface
+    {
+        return $this->dateCreated;
+    }
+
+    public function setDateCreated(\DateTimeInterface $dateCreated): self
+    {
+        $this->dateCreated = $dateCreated;
 
         return $this;
     }

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ parent() }} Mes biens
+{% endblock %}
+
+{% block body %}
+<div class="content-bien">
+    <h1>Mes biens</h1>
+    <a class="btnPrimary" href="{{ path('bien_ajout') }}">Ajouter un bien</a>
+</div>
+{% endblock %}

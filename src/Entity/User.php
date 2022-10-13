@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\HttpFoundation\File\File;
@@ -94,6 +96,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, \Serial
      * @ORM\Column(type="datetime")
      */
     private $dateInscription;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Bien::class, mappedBy="user")
+     */
+    private $biens;
+
+    public function __construct()
+    {
+        $this->biens = new ArrayCollection();
+    }
 
 
 
@@ -317,5 +329,35 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, \Serial
             $this->roles,
             $this->password,
             ) = unserialize($data,['allowed_classes'=>false]);
+    }
+
+    /**
+     * @return Collection<int, Bien>
+     */
+    public function getBiens(): Collection
+    {
+        return $this->biens;
+    }
+
+    public function addBien(Bien $bien): self
+    {
+        if (!$this->biens->contains($bien)) {
+            $this->biens[] = $bien;
+            $bien->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBien(Bien $bien): self
+    {
+        if ($this->biens->removeElement($bien)) {
+            // set the owning side to null (unless already changed)
+            if ($bien->getUser() === $this) {
+                $bien->setUser(null);
+            }
+        }
+
+        return $this;
     }
 }

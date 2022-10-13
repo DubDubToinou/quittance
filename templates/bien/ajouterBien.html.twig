@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ parent() }} Ajouter Bien
+{% endblock %}
+
+{% block body %}
+
+    <div class="content-bien">
+
+        {% if form_errors(bienForm) %}
+            <div class="alert">
+                {{ form_errors(registrationForm) }}
+            </div>
+        {% endif %}
+
+        {{ form_start(bienForm) }}
+
+        {{ form_widget(bienForm.titre) }}
+        {{ form_widget(bienForm.adresse) }}
+        {{ form_widget(bienForm.ville) }}
+        {{ form_widget(bienForm.codePostal) }}
+        {{ form_widget(bienForm.prixLocation) }}
+        {{ form_widget(bienForm.prixCharge) }}
+
+        <button class="btnSubmit" type="submit">Ajouter le bien</button>
+
+        {{ form_end(bienForm) }}
+
+
+    </div>
+
+{% endblock %}
+
+
+
