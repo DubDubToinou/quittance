@@ -7,7 +7,7 @@
     <h1>Gestion Quittance</h1>
 
     <div class="user">
-        <a href="#"><img class="avatar" src="{{ vich_uploader_asset(app.user, 'imageFile') }}" alt="avatar"></a>
+        <a href="{{ path('profil_affichage') }}"><img class="avatar" src="{{ vich_uploader_asset(app.user, 'imageFile') }}" alt="avatar"></a>
         <a class="deconnexion" href="{{ path('app_logout') }}" title="deconnexion"><img src="{{ asset('img/deconnexion.svg') }}" alt="deconnexion"></a>
     </div>
 </nav>
