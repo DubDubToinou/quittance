@@ -1,8 +1,9 @@
 *{
     margin: 0;
     font-family: 'Inter', Serif, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     box-sizing: border-box;
+
 }
 
 a{
@@ -24,7 +25,7 @@ body {
 
 .btnSubmit {
     padding: 7px 50px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     border-radius: 10px;
     overflow: hidden;
     background-color: #3a4c69;
@@ -33,7 +34,7 @@ body {
 }
 
 .remember_me{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .btnSubmit:hover{
@@ -43,7 +44,7 @@ body {
 
 .btnNouveauCompte {
     padding: 7px 50px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     border-radius: 10px;
     overflow: hidden;
     background-color: #3a4c69;
