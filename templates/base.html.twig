@@ -30,17 +30,25 @@
             </div>
         {% endfor %}
     {% endfor %}
+    {% if app.user %}
+        <div class="sidebar">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+    {% endif %}
 
-    <div class="containerBody">
         {% block body %}
 
         {% endblock %}
-    </div>
+
 
 </main>
 
 <footer>
     {% block footer %}
+        &copy;Quittance | Since 2022
     {% endblock %}
 </footer>
 

@@ -27,9 +27,8 @@
             {{ form_widget(registrationForm.plainPassword) }}
 
             <button type="submit" class="btnSubmit">S'inscrire</button>
-            <a href="{{ path('app_login') }}">
-                <button type="button" class="btnSubmit">Déjà un compte ?</button>
-            </a>
+            <a class="btnNouveauCompte" href="{{ path('app_login') }}">Déjà un compte ?</a>
+
             {{ form_end(registrationForm) }}
         </div>
     </div>
