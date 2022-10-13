@@ -12,10 +12,14 @@
         </div>
 
 
-        <p><h3>E-mail :</h3>{{ profil.email }}</p>
-        <p><h3>Adresse :</h3>{{ profil.adresse ? profil.adresse : 'Pas d\'adresse' }}</p>
-        <p><h3>Ville :</h3>{{ profil.adresse ? profil.adresse : 'Pas d\'adresse' }}</p>
-        <p><h3>Code Postal :</h3>{{ profil.adresse ? profil.adresse : 'Pas d\'adresse' }}</p>
+        <p>
+        <h3>E-mail :</h3>{{ profil.email }}</p>
+        <p>
+        <h3>Adresse :</h3>{{ profil.adresse ? profil.adresse : 'Pas d\'adresse' }}</p>
+        <div class="villeCp">
+            {{ profil.codePostal ? profil.codePostal : 'Pas d\'adresse' }}
+            {{ profil.ville ? profil.ville : 'Pas d\'adresse' }}
+        </div>
 
         <a class="btnPrimary" href="{{ path('profil_modifier') }}">Modifier mon profil</a>
     </div>

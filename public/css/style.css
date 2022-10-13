@@ -112,6 +112,20 @@ input:focus{
     border-radius: 20px;
 }
 
+.messageFlash{
+    display: flex;
+    justify-content: center;
+}
+
+.flash-success{
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    background-color: #16cc16;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
 /*  ###################################
     ##           NAV BAR             ##
     ###################################*/
@@ -189,6 +203,16 @@ h1{
 }
 
 /*  ###################################
+    ##           HEADER      ##
+    ###################################*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*  ###################################
     ##           CONTENT PROFIL      ##
     ###################################*/
 
@@ -215,7 +239,7 @@ main{
 }
 
 .contentProfil h3{
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-decoration: underline;
     padding-bottom: 3px;
 }
@@ -223,6 +247,19 @@ main{
 .contentProfil h2{
     font-size: 1.3rem;
     text-shadow: 4px 2px 5px #e5d9d9;
+}
+
+.contentProfil img{
+    width: 65px;
+    box-shadow: 0px 0px 8px 1px #0e0e0e;
+    border-radius: 45%;
+}
+
+
+.villeCp{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 
 .headProfil{
@@ -262,11 +299,6 @@ main{
 }
 
 
-
-
-
-
-
 /*  ###################################
     ##           FORM MODIFIER      ##
     ###################################*/
@@ -285,6 +317,7 @@ main{
     flex-wrap: wrap;
     padding: 18px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    margin-bottom: 20px;
 }
 
 

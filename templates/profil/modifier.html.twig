@@ -18,6 +18,8 @@
 
         {{ form_start(formModifier) }}
 
+        {{ form_widget(formModifier.imageFile) }}
+        <br>
         <div class="first-content-form">
             {{ form_widget(formModifier.email) }}
             {{ form_widget(formModifier.nom) }}
@@ -28,8 +30,6 @@
             {{ form_widget(formModifier.ville) }}
             {{ form_widget(formModifier.codePostal) }}
         </div>
-
-        {{ form_widget(formModifier.imageFile) }}
 
         <br>
         <button class="btnSubmit" type="submit">Valider</button>

@@ -19,19 +19,18 @@
     {% if app.user %}
         {% include 'inc/_nav.html.twig' %}
         {% include 'inc/_sideBar.html.twig' %}
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="flash-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
     {% endif %}
 </header>
 
 <main>
 
-
-    {% for label, messages in app.flashes %}
-        {% for message in messages %}
-            <div class="flash flash-{{ label }}">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endfor %}
 
     {% block body %}
 
@@ -40,11 +39,11 @@
 
 </main>
 
-<footer>
+{# <footer>
     {% block footer %}
         &copy;Quittance | Since 2022
     {% endblock %}
-</footer>
+</footer> #}
 
 
 </body>
