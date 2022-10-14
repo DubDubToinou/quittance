@@ -2,26 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\Biens;
+use App\Entity\Bien;
+use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Biens>
+ * @extends ServiceEntityRepository<Bien>
  *
- * @method Biens|null find($id, $lockMode = null, $lockVersion = null)
- * @method Biens|null findOneBy(array $criteria, array $orderBy = null)
- * @method Biens[]    findAll()
- * @method Biens[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Bien|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Bien|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Bien[]    findAll()
+ * @method Bien[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class BiensRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Biens::class);
+        parent::__construct($registry, Bien::class);
     }
 
-    public function add(Biens $entity, bool $flush = false): void
+    public function add(Bien $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +31,7 @@ class BiensRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Biens $entity, bool $flush = false): void
+    public function remove(Bien $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -39,28 +40,19 @@ class BiensRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return Biens[] Returns an array of Biens objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('b')
-//            ->andWhere('b.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('b.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    public function findByUser(User $user){
 
-//    public function findOneBySomeField($value): ?Biens
-//    {
-//        return $this->createQueryBuilder('b')
-//            ->andWhere('b.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+
+        $qb = $this->createQueryBuilder('b');
+        $qb->innerJoin('b.user', 'user')
+            ->addSelect('user');
+
+        $qb->where('b.user = :user');
+        $qb->setParameter('user', $user);
+
+        $query = $qb->getQuery()->getResult();
+
+        return $query;
+
+    }
 }

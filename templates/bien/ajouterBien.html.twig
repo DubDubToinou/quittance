@@ -5,9 +5,7 @@
 {% endblock %}
 
 {% block body %}
-
     <div class="content-bien">
-
         {% if form_errors(bienForm) %}
             <div class="alert">
                 {{ form_errors(registrationForm) }}
@@ -24,11 +22,8 @@
         {{ form_widget(bienForm.prixCharge) }}
 
         <button class="btnSubmit" type="submit">Ajouter le bien</button>
-
-        {{ form_end(bienForm) }}
-
-
     </div>
+        {{ form_end(bienForm) }}
 
 {% endblock %}
 

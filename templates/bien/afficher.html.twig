@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+
+       {% for b in bien %}
+            <div class="content-bien">
+            {{ b.titre }}
+            </div>
+        {% endfor %}
+    <a class="btnPrimary" href="{{ path('bien_ajout') }}">Ajouter un bien</a>
+{% endblock %}
+
+
+

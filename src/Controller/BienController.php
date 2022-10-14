@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Bien;
 use App\Form\BienFormType;
+use App\Repository\BiensRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,8 +21,22 @@ class BienController extends AbstractController
      */
     public function index(): Response
     {
+
         return $this->render('bien/index.html.twig', [
-            'controller_name' => 'BienController',
+
+        ]);
+    }
+
+    /**
+     * @Route("/afficherBien", name="bien_afficher")
+     */
+    public function afficherBien(BiensRepository $biensRepository): Response
+    {
+
+        $bien = $biensRepository->findByUser($this->getUser());
+
+        return $this->render('bien/afficher.html.twig', [
+            'bien'=>$bien
         ]);
     }
 
@@ -50,7 +65,6 @@ class BienController extends AbstractController
         return $this->renderForm('bien/ajouterBien.html.twig', [
             'bienForm' => $bienForm
         ]);
-
-
     }
+
 }

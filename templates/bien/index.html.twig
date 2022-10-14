@@ -5,8 +5,17 @@
 {% endblock %}
 
 {% block body %}
-<div class="content-bien">
+
     <h1>Mes biens</h1>
+
+
+      {#   {% for b in bien %}
+            <div class="content-bien">
+            {{ b.titre }}
+            </div>
+        {% endfor %}#}
+
+
     <a class="btnPrimary" href="{{ path('bien_ajout') }}">Ajouter un bien</a>
-</div>
+
 {% endblock %}
